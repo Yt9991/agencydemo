@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate ERP Demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .sidebar {
+      height: 100vh;
+      background-color: #343a40;
+      color: #fff;
+    }
+    .sidebar a {
+      color: #fff;
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+    }
+    .sidebar a:hover {
+      background-color: #495057;
+    }
+    .header {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+    .card {
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block sidebar">
+        <h4 class="text-center py-3">Agency ERP</h4>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#crm">CRM</a>
+        <a href="#listings">Listings</a>
+        <a href="#transactions">Transactions</a>
+        <a href="#compliance">CEA Compliance</a>
+        <a href="#reports">Reports</a>
+      </nav>
+
+      <main class="col-md-10 ms-sm-auto">
+        <div class="header">
+          <h2>Admin Dashboard</h2>
+        </div>
+
+        <div class="container mt-4">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card shadow p-3">
+                <h5>Total Agents</h5>
+                <p class="display-6">28</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow p-3">
+                <h5>Active Listings</h5>
+                <p class="display-6">92</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow p-3">
+                <h5>Pending Transactions</h5>
+                <p class="display-6">7</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <h4>Recent Listings</h4>
+              <ul class="list-group">
+                <li class="list-group-item">Condo @ Orchard - $2.3M</li>
+                <li class="list-group-item">HDB @ Tampines - $550K</li>
+                <li class="list-group-item">Landed @ Bukit Timah - $6.8M</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h4>CEA Compliance Alerts</h4>
+              <ul class="list-group">
+                <li class="list-group-item text-danger">3 agents overdue AML declaration</li>
+                <li class="list-group-item">July transaction submission: 85% complete</li>
+                <li class="list-group-item text-warning">2 missing CPD entries</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

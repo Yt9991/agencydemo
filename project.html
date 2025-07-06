@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>New Launch Projects Showcase</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: #f5f8fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-bottom: 40px;
+    }
+    h2 {
+      margin: 30px 0 20px;
+      color: #0d6efd;
+      text-align: center;
+      font-weight: 700;
+    }
+    .filter-input {
+      max-width: 400px;
+      margin-bottom: 15px;
+    }
+    .table-responsive {
+      max-height: 450px;
+      overflow-y: auto;
+    }
+    .tab-content {
+      margin-top: 20px;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 10px;
+    }
+    a.salesperson-link {
+      color: #0d6efd;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a.salesperson-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h2>New Launch Projects Across Singapore</h2>
+
+  <input
+    type="text"
+    class="form-control filter-input"
+    placeholder="Filter by Project Name, Developer or Salesperson"
+    id="filterProjects"
+    onkeyup="filterTable('projectsTable', this.value)"
+  />
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover" id="projectsTable">
+      <thead class="table-primary sticky-top">
+        <tr>
+          <th>Project Name</th>
+          <th>Developer</th>
+          <th>Commission Payable (%)</th>
+          <th>Salesperson</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Azure Residences</td>
+          <td>ABC Developers Pte Ltd</td>
+          <td>2.5%</td>
+          <td><a href="#" class="salesperson-link" title="Contact Jane Tan">Jane Tan</a></td>
+          <td>jane.tan@example.com<br>+65 9123 4567</td>
+        </tr>
+        <tr>
+          <td>Marina Bay Towers</td>
+          <td>Sunrise Properties</td>
+          <td>3.0%</td>
+          <td><a href="#" class="salesperson-link" title="Contact John Lim">John Lim</a></td>
+          <td>john.lim@example.com<br>+65 9876 5432</td>
+        </tr>
+        <tr>
+          <td>Emerald Gardens</td>
+          <td>Greenfield Developers</td>
+          <td>2.8%</td>
+          <td><a href="#" class="salesperson-link" title="Contact Sarah Chen">Sarah Chen</a></td>
+          <td>sarah.chen@example.com<br>+65 9345 6789</td>
+        </tr>
+        <!-- Add more projects as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <ul class="nav nav-tabs mt-4" id="launchTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="past-tab" data-bs-toggle="tab" data-bs-target="#past" type="button" role="tab" aria-controls="past" aria-selected="true">Past Transactions</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pg-tab" data-bs-toggle="tab" data-bs-target="#propertyguru" type="button" role="tab" aria-controls="propertyguru" aria-selected="false">PropertyGuru Listings</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="99co-tab" data-bs-toggle="tab" data-bs-target="#99co" type="button" role="tab" aria-controls="99co" aria-selected="false">99.co Listings</button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="launchTabsContent">
+
+    <!-- Past Transactions -->
+    <div class="tab-pane fade show active" id="past" role="tabpanel" aria-labelledby="past-tab">
+      <div class="table-responsive mt-3">
+        <table class="table table-sm table-bordered">
+          <thead class="table-secondary">
+            <tr>
+              <th>Date</th>
+              <th>Project</th>
+              <th>Buyer</th>
+              <th>Sale Price (SGD)</th>
+              <th>Commission Paid (SGD)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2025-05-20</td><td>Azure Residences</td><td>Mr. Lim</td><td>1,200,000</td><td>30,000</td></tr>
+            <tr><td>2025-05-15</td><td>Marina Bay Towers</td><td>Ms. Ong</td><td>2,500,000</td><td>75,000</td></tr>
+            <tr><td>2025-04-30</td><td>Emerald Gardens</td><td>Mr. Tan</td><td>950,000</td><td>26,600</td></tr>
+            <!-- More transaction rows -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PropertyGuru Listings -->
+    <div class="tab-pane fade" id="propertyguru" role="tabpanel" aria-labelledby="pg-tab">
+      <div class="mt-3">
+        <p><strong>PropertyGuru Listings (Sample Data)</strong></p>
+        <ul>
+          <li><a href="https://www.propertyguru.com.sg/property-listing/azure-residences-123456" target="_blank" rel="noopener noreferrer">Azure Residences - 2 Bedroom Unit</a></li>
+          <li><a href="https://www.propertyguru.com.sg/property-listing/marina-bay-towers-654321" target="_blank" rel="noopener noreferrer">Marina Bay Towers - 3 Bedroom Unit</a></li>
+          <li><a href="https://www.propertyguru.com.sg/property-listing/emerald-gardens-789012" target="_blank" rel="noopener noreferrer">Emerald Gardens - Penthouse</a></li>
+        </ul>
+        <p class="note">* Links are examples, replace with real dynamic listings fetched via APIs or manual input.</p>
+      </div>
+    </div>
+
+    <!-- 99.co Listings -->
+    <div class="tab-pane fade" id="99co" role="tabpanel" aria-labelledby="99co-tab">
+      <div class="mt-3">
+        <p><strong>99.co Listings (Sample Data)</strong></p>
+        <ul>
+          <li><a href="https://www.99.co/singapore/azure-residences-123456" target="_blank" rel="noopener noreferrer">Azure Residences - 2 Bedroom Apartment</a></li>
+          <li><a href="https://www.99.co/singapore/marina-bay-towers-654321" target="_blank" rel="noopener noreferrer">Marina Bay Towers - 3 Bedroom Apartment</a></li>
+          <li><a href="https://www.99.co/singapore/emerald-gardens-789012" target="_blank" rel="noopener noreferrer">Emerald Gardens - Luxury Penthouse</a></li>
+        </ul>
+        <p class="note">* Replace with real-time data using APIs or feeds from 99.co if available.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  function filterTable(tableId, filterValue) {
+    const filter = filterValue.toUpperCase();
+    const table = document.getElementById(tableId);
+    const trs = table.tBodies[0].getElementsByTagName('tr');
+    for (let i = 0; i < trs.length; i++) {
+      const tds = trs[i].getElementsByTagName('td');
+      let showRow = false;
+      for (let j = 0; j < tds.length; j++) {
+        if (tds[j].textContent.toUpperCase().indexOf(filter) > -1) {
+          showRow = true;
+          break;
+        }
+      }
+      trs[i].style.display = showRow ? '' : 'none';
+    }
+  }
+</script>
+
+</body>
+</html>

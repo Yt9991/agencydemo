@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ERP Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 1200px;
+      margin-top: 20px;
+    }
+    .grid-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .btn-dashboard {
+      padding: 1.5rem;
+      font-size: 1.1rem;
+      text-align: center;
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .btn-dashboard:hover {
+      transform: scale(1.05);
+    }
+    .btn-main {
+      font-size: 1.5rem;
+      padding: 2rem;
+      font-weight: bold;
+      border-radius: 12px;
+    }
+    .header {
+      text-align: center;
+      color: #343a40;
+      margin-bottom: 3rem;
+    }
+    .btn-primary-custom { background-color: #007bff; }
+    .btn-success-custom { background-color: #28a745; }
+    .btn-warning-custom { background-color: #ffc107; }
+    .btn-info-custom { background-color: #17a2b8; }
+    .btn-dark-custom { background-color: #343a40; }
+    .btn-danger-custom { background-color: #dc3545; }
+    .btn-outline-custom { background-color: transparent; }
+    .btn-outline-custom:hover { color: #007bff; border-color: #007bff; }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .btn-dashboard {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body class="p-4">
+  <div class="container">
+    <h1 class="header">ERP Main Dashboard</h1>
+    <div class="grid-buttons">
+      <!-- Main Dashboard Link -->
+      <a href="crm.html" class="btn btn-primary-custom btn-dashboard btn-main">User Registration (Salespersons, Leads, Keo, Admin, CEO)</a>
+      <!-- Admin Dashboard Link -->
+      <a href="template index.html" class="btn btn-success-custom btn-dashboard btn-main">Admin Dashboard</a>
+
+      <!-- Property Listings -->
+      <a href="lisiting.html" class="btn btn-warning-custom btn-dashboard">Residential, Commercial, Industrial Property Listings</a>
+      <!-- Compliance -->
+      <a href="compliance.html" class="btn btn-info-custom btn-dashboard">CEA Complaint, Investigation Process, Concluded</a>
+      <!-- Salespersons Transactions -->
+      <a href="sales.html" class="btn btn-info-custom btn-dashboard">Salesperson & Leader’s Transactions and Overriding</a>
+      <!-- Finance Section -->
+      <a href="finance.html" class="btn btn-secondary btn-dashboard">CEA, IRAS, GST Submission</a>
+      <!-- HRM Section -->
+      <a href="hrm.html" class="btn btn-dark-custom btn-dashboard">CEA Circular & News</a>
+      <!-- Marketing Section -->
+      <a href="marketing.html" class="btn btn-danger-custom btn-dashboard">Social Media</a>
+      <!-- New Launch Projects -->
+      <a href="project.html" class="btn btn-outline-primary btn-dashboard">New Launch Projects</a>
+      <!-- Tenant Documentation -->
+      <a href="tenant.html" class="btn btn-outline-secondary btn-dashboard">Contract & Documentation</a>
+      <!-- AI-Powered Section -->
+      <a href="Ai powered.html" class="btn btn-outline-custom btn-dashboard">Powered by AI</a>
+      <!-- Reporting -->
+      <a href="reporting.html" class="btn btn-outline-success btn-dashboard">Prevention of Money Laundering and Financing of Terrorism</a>
+      <!-- Property Owner Free Posting -->
+      <a href="public.html" class="btn btn-outline-success btn-dashboard">Property Owner Free Posting Website</a>
+      
+      <!-- Log Out -->
+      <div class="text-center mt-3">
+        <a href="login.html" class="btn btn-outline-custom btn-dashboard">Log Out</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
